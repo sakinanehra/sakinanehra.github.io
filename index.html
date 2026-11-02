@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Sakina Nehra — Full Stack Developer</title>
+  <title>Sakina Nehra — Java Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Sakina Nehra, Java Full Stack Developer skilled in Spring Boot, REST APIs, MySQL and web development, with hands-on QA experience."/>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -31,6 +32,11 @@
       font-size: 16px;
       line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    a:focus-visible, .btn:focus-visible {
+      outline: 2px solid var(--accent2);
+      outline-offset: 3px;
     }
 
     /* ── SCROLLBAR ── */
@@ -279,6 +285,38 @@
       border-radius: 6px;
     }
 
+    /* ── EXPERIENCE ── */
+    .exp-list {
+      display: flex; flex-direction: column; gap: 1rem;
+      max-width: 820px;
+    }
+
+    .exp-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.3rem 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .exp-item:hover { border-color: rgba(124,109,250,0.4); }
+
+    .exp-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      gap: 0.5rem 1rem; flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-role { font-size: 1.02rem; font-weight: 700; color: var(--text); }
+    .exp-company { font-size: 0.88rem; color: var(--accent2); font-weight: 500; }
+
+    .exp-date {
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .exp-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
     /* ── PROJECTS ── */
     .projects-grid {
       display: grid;
@@ -349,7 +387,7 @@
       padding: 0.2rem 0.5rem;
     }
 
-    .project-links { display: flex; gap: 0.75rem; }
+    .project-links { display: flex; gap: 1rem; flex-wrap: wrap; }
 
     .project-link {
       font-size: 0.82rem;
@@ -459,10 +497,11 @@
 
   <!-- NAV -->
   <nav>
-    <div class="nav-logo">sakina.dev</div>
+    <div class="nav-logo">Sakina Nehra</div>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -472,13 +511,14 @@
   <section id="hero">
     <div class="hero-inner">
       <div class="hero-tag">Available for work &amp; freelance</div>
-      <h1>Hi, I'm <span>Sakina Nehra</span><br/>Full Stack Developer</h1>
+      <h1>Hi, I'm <span>Sakina Nehra</span><br/>Java Full Stack Developer</h1>
       <p class="hero-sub">
         I build real-world web applications — from REST APIs and Spring Boot backends
         to clean, functional frontends. Turning ideas into working software.
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">View My Work ↓</a>
+        <a href="Sakina_Nehra_Resume_Java_FullStack.pdf" class="btn btn-ghost" target="_blank" rel="noopener">Download Resume</a>
         <a href="#contact" class="btn btn-ghost">Get In Touch</a>
       </div>
     </div>
@@ -491,25 +531,25 @@
         <div class="section-label">// about me</div>
         <h2 class="section-title">Building things that<br/>actually work</h2>
         <p>I'm a <strong>B.Tech CSE graduate</strong> with hands-on experience building complete web applications — from database design and REST APIs to frontend interfaces users actually enjoy using.</p>
-        <p>I work across the stack: <strong>Java & Spring Boot</strong> on the backend, <strong>MySQL</strong> for data, and <strong>HTML, CSS, JavaScript & PHP</strong> on the frontend. I've completed <strong>3 internships</strong> and shipped projects to production.</p>
+        <p>I work across the stack: <strong>Java &amp; Spring Boot</strong> on the backend, <strong>MySQL</strong> for data, and <strong>HTML, CSS &amp; JavaScript</strong> on the frontend, with <strong>PHP</strong> for earlier projects. I've completed <strong>4 internships</strong>, including a developer internship and a testing internship, and deployed a full-stack project to production.</p>
         <p>Currently open to <strong>full-time roles</strong> and <strong>freelance projects</strong> — especially building management systems, dashboards, and business web apps.</p>
       </div>
       <div class="about-stats fade-in">
         <div class="stat-card">
-          <div class="stat-num">4+</div>
+          <div class="stat-num">4</div>
           <div class="stat-label">Projects Built</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">3</div>
-          <div class="stat-label">Internships Done</div>
+          <div class="stat-num">4</div>
+          <div class="stat-label">Internships</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">2</div>
-          <div class="stat-label">Live Deployments</div>
+          <div class="stat-num">1</div>
+          <div class="stat-label">Live Deployment</div>
         </div>
         <div class="stat-card">
-          <div class="stat-num">∞</div>
-          <div class="stat-label">Bugs Fixed 😄</div>
+          <div class="stat-num">100+</div>
+          <div class="stat-label">Test Cases Executed</div>
         </div>
       </div>
     </div>
@@ -519,7 +559,7 @@
   <section id="skills">
     <div class="section-label fade-in">// tech stack</div>
     <h2 class="section-title fade-in">What I work with</h2>
-    <p class="section-sub fade-in">Tools and technologies I use to build full-stack applications from scratch to deployment.</p>
+    <p class="section-sub fade-in">Tools and technologies I use to build, test and deploy full-stack applications.</p>
     <div class="skills-grid">
       <div class="skill-group fade-in">
         <div class="skill-group-title">Frontend</div>
@@ -527,7 +567,7 @@
           <span class="tag">HTML5</span>
           <span class="tag">CSS3</span>
           <span class="tag">JavaScript</span>
-          <span class="tag">Chart.js</span>
+          <span class="tag">ReactJS (basic)</span>
         </div>
       </div>
       <div class="skill-group fade-in">
@@ -535,6 +575,8 @@
         <div class="skill-tags">
           <span class="tag">Java</span>
           <span class="tag">Spring Boot</span>
+          <span class="tag">Spring Data JPA</span>
+          <span class="tag">Hibernate</span>
           <span class="tag">REST API</span>
           <span class="tag">Core PHP</span>
         </div>
@@ -544,20 +586,93 @@
         <div class="skill-tags">
           <span class="tag">MySQL</span>
           <span class="tag">SQL</span>
-          <span class="tag">JPA</span>
         </div>
       </div>
       <div class="skill-group fade-in">
-        <div class="skill-group-title">Tools & Deploy</div>
+        <div class="skill-group-title">Testing</div>
+        <div class="skill-tags">
+          <span class="tag">Manual Testing</span>
+          <span class="tag">Test Case Design</span>
+          <span class="tag">Bug Reporting</span>
+          <span class="tag">Postman</span>
+          <span class="tag">Apache JMeter</span>
+          <span class="tag">XPath</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <div class="skill-group-title">Core CS</div>
+        <div class="skill-tags">
+          <span class="tag">OOP</span>
+          <span class="tag">Data Structures</span>
+          <span class="tag">DBMS</span>
+          <span class="tag">Computer Networks (basic)</span>
+        </div>
+      </div>
+      <div class="skill-group fade-in">
+        <div class="skill-group-title">Tools &amp; Deploy</div>
         <div class="skill-tags">
           <span class="tag">Git</span>
           <span class="tag">GitHub</span>
-          <span class="tag">Postman</span>
           <span class="tag">Maven</span>
+          <span class="tag">Linux</span>
           <span class="tag">Vercel</span>
           <span class="tag">Railway</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label fade-in">// experience</div>
+    <h2 class="section-title fade-in">Where I've worked</h2>
+    <p class="section-sub fade-in">Internships across development and testing.</p>
+    <div class="exp-list">
+
+      <div class="exp-item fade-in">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">Testing Intern</div>
+            <div class="exp-company">Solitera Software, Gurgaon</div>
+          </div>
+          <div class="exp-date">Sep 2026 – Present</div>
+        </div>
+        <p class="exp-desc">Wrote and executed 100+ manual test cases across 6–7 web application modules, reported and retested defects through the bug lifecycle, and performed API testing with Postman and performance testing with Apache JMeter.</p>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">Software Developer Intern</div>
+            <div class="exp-company">XIO Infotech, Gurgaon</div>
+          </div>
+          <div class="exp-date">Feb 2026 – Jul 2026</div>
+        </div>
+        <p class="exp-desc">Built REST APIs with Java Spring Boot, designed project databases, developed frontend pages with HTML, CSS and JavaScript, and integrated them with the backend. Tested APIs using Postman.</p>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">DSA with Java Intern</div>
+            <div class="exp-company">Cut Edge Technology Pvt. Ltd., Gurgaon</div>
+          </div>
+          <div class="exp-date">May 2025 – Jul 2025</div>
+        </div>
+        <p class="exp-desc">Strengthened Java and Data Structures fundamentals through problem-solving practice.</p>
+      </div>
+
+      <div class="exp-item fade-in">
+        <div class="exp-head">
+          <div>
+            <div class="exp-role">Web Development Intern (Virtual)</div>
+            <div class="exp-company">Acmegrade</div>
+          </div>
+          <div class="exp-date">Jun 2024 – Aug 2024</div>
+        </div>
+        <p class="exp-desc">Learned front-end development fundamentals and built a basic e-commerce website.</p>
+      </div>
+
     </div>
   </section>
 
@@ -573,18 +688,37 @@
         <div class="project-body">
           <div class="project-type">Full Stack · Deployed</div>
           <div class="project-name">Personal Finance Tracker</div>
-          <p class="project-desc">A production-ready finance management app with interactive charts, expense tracking, and REST API integration. Deployed on Vercel + Railway.</p>
+          <p class="project-desc">A full-stack finance app with accounts, transactions, budgets, goals and recurring transactions, plus an interactive Chart.js dashboard. Frontend on Vercel, Spring Boot API and MySQL on Railway.</p>
           <div class="project-stack">
             <span class="stack-tag">Java</span>
             <span class="stack-tag">Spring Boot</span>
+            <span class="stack-tag">JPA/Hibernate</span>
             <span class="stack-tag">MySQL</span>
             <span class="stack-tag">JavaScript</span>
             <span class="stack-tag">Chart.js</span>
-            <span class="stack-tag">REST API</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sakinanehra/Personal-Finance-Tracker-Production" target="_blank" class="project-link">⬡ GitHub →</a>
-            <!-- <a href="YOUR_LIVE_URL" target="_blank" class="project-link">↗ Live Demo</a> -->
+            <a href="https://personal-finance-tracker-production.vercel.app" target="_blank" rel="noopener" class="project-link">↗ Live Demo</a>
+            <a href="https://github.com/sakinanehra/Personal-Finance-Tracker-Production" target="_blank" rel="noopener" class="project-link">⬡ GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-thumb">🛒</div>
+        <div class="project-body">
+          <div class="project-type">Web App · PHP</div>
+          <div class="project-name">E-Commerce Website</div>
+          <p class="project-desc">An online store with user registration and login, product search and details, a shopping cart, and a separate admin panel for managing products, categories and brands.</p>
+          <div class="project-stack">
+            <span class="stack-tag">PHP</span>
+            <span class="stack-tag">MySQL</span>
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">XAMPP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sakinanehra/My-Store" target="_blank" rel="noopener" class="project-link">⬡ GitHub</a>
           </div>
         </div>
       </div>
@@ -594,7 +728,7 @@
         <div class="project-body">
           <div class="project-type">Management System · PHP</div>
           <div class="project-name">Dental Clinic CMS</div>
-          <p class="project-desc">A complete clinic management system with an admin panel for managing services, appointments, and patient records — built for a real business use case.</p>
+          <p class="project-desc">A clinic management system with an admin panel for managing clinic services.</p>
           <div class="project-stack">
             <span class="stack-tag">PHP</span>
             <span class="stack-tag">MySQL</span>
@@ -603,7 +737,7 @@
             <span class="stack-tag">JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sakinanehra/dental-cms" target="_blank" class="project-link">⬡ GitHub →</a>
+            <a href="https://github.com/sakinanehra/dental-cms" target="_blank" rel="noopener" class="project-link">⬡ GitHub</a>
           </div>
         </div>
       </div>
@@ -611,16 +745,14 @@
       <div class="project-card fade-in">
         <div class="project-thumb">🤖</div>
         <div class="project-body">
-          <div class="project-type">AI Tool · Python</div>
+          <div class="project-type">Developer Tool · Python</div>
           <div class="project-name">GitGrade MVP</div>
-          <p class="project-desc">An AI-inspired GitHub repository analyzer that evaluates code quality, project structure, documentation, and commit practices — then generates a score and summary report.</p>
+          <p class="project-desc">A lightweight GitHub repository analyzer that evaluates code quality, project structure, documentation and commit practices, then generates a score and summary report.</p>
           <div class="project-stack">
             <span class="stack-tag">Python</span>
-            <span class="stack-tag">GitHub API</span>
-            <span class="stack-tag">AI/NLP</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/sakinanehra/gitgrade-mvp" target="_blank" class="project-link">⬡ GitHub →</a>
+            <a href="https://github.com/sakinanehra/gitgrade-mvp" target="_blank" rel="noopener" class="project-link">⬡ GitHub</a>
           </div>
         </div>
       </div>
@@ -642,14 +774,14 @@
             <div class="contact-value">sakinanehra512@gmail.com</div>
           </div>
         </a>
-        <a href="https://github.com/sakinanehra" target="_blank" class="contact-item">
+        <a href="https://github.com/sakinanehra" target="_blank" rel="noopener" class="contact-item">
           <div class="contact-icon">⬡</div>
           <div>
             <div class="contact-label">GitHub</div>
             <div class="contact-value">github.com/sakinanehra</div>
           </div>
         </a>
-        <a href="https://linkedin.com/in/sakina-nehra-7a3384313" target="_blank" class="contact-item">
+        <a href="https://linkedin.com/in/sakina-nehra-7a3384313" target="_blank" rel="noopener" class="contact-item">
           <div class="contact-icon">💼</div>
           <div>
             <div class="contact-label">LinkedIn</div>
